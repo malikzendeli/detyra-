@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640">
+  <rect width="960" height="640" fill="#FFFFFF"/>
+  <text x="40" y="52" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" fill="#1B2430">Tezga · Brand book v1</text>
+  <text x="40" y="80" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="15" fill="#5A6472">Dyqani yt online, sot. · Твојата продавница онлајн, денес. · Your shop online, today.</text>
+  <!-- logo on light -->
+  <rect x="40" y="104" width="430" height="190" rx="16" fill="#FFF6EC"/>
+  <g transform="translate(95,160) scale(1.3)">
+  <g transform="">
+    <rect x="6" y="6" width="52" height="6" rx="3" fill="#1B2430"/>
+    <path d="M8 10H20V26A6 6 0 0 1 8 26Z" fill="#E4572E"/>
+    <path d="M20 10H32V26A6 6 0 0 1 20 26Z" fill="#F2A541"/>
+    <path d="M32 10H44V26A6 6 0 0 1 32 26Z" fill="#E4572E"/>
+    <path d="M44 10H56V26A6 6 0 0 1 44 26Z" fill="#F2A541"/>
+    <rect x="12" y="36" width="40" height="18" rx="3" fill="#1B2430"/>
+  </g>
+    <text x="74" y="49" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#1B2430">tezga</text>
+  </g>
+  <text x="56" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" fill="#5A6472">On light</text>
+  <!-- logo on dark -->
+  <rect x="490" y="104" width="430" height="190" rx="16" fill="#1B2430"/>
+  <g transform="translate(545,160) scale(1.3)">
+  <g transform="">
+    <rect x="6" y="6" width="52" height="6" rx="3" fill="#FFF6EC"/>
+    <path d="M8 10H20V26A6 6 0 0 1 8 26Z" fill="#E4572E"/>
+    <path d="M20 10H32V26A6 6 0 0 1 20 26Z" fill="#F2A541"/>
+    <path d="M32 10H44V26A6 6 0 0 1 32 26Z" fill="#E4572E"/>
+    <path d="M44 10H56V26A6 6 0 0 1 44 26Z" fill="#F2A541"/>
+    <rect x="12" y="36" width="40" height="18" rx="3" fill="#FFF6EC"/>
+  </g>
+    <text x="74" y="49" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1" fill="#FFF6EC">tezga</text>
+  </g>
+  <text x="506" y="282" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" fill="#9AA3AF">On dark</text>
+  <!-- colours -->
+  <text x="40" y="340" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">Colours</text>
+  <rect x="40" y="356" width="200" height="96" rx="12" fill="#E4572E"/>
+  <text x="40" y="474" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1B2430">Tezga Terracotta</text>
+  <text x="40" y="494" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">#E4572E · primary, buttons</text>
+  <rect x="260" y="356" width="200" height="96" rx="12" fill="#1B2430"/>
+  <text x="260" y="474" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1B2430">Night Ink</text>
+  <text x="260" y="494" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">#1B2430 · text, dark mode</text>
+  <rect x="480" y="356" width="200" height="96" rx="12" fill="#FFF6EC" stroke="#E5DED4"/>
+  <text x="480" y="474" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1B2430">Market Cream</text>
+  <text x="480" y="494" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">#FFF6EC · backgrounds</text>
+  <rect x="700" y="356" width="220" height="96" rx="12" fill="#F2A541"/>
+  <text x="700" y="474" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" fill="#1B2430">Awning Amber (accent)</text>
+  <text x="700" y="494" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">#F2A541 · logo stripes, badges</text>
+  <!-- fonts -->
+  <text x="40" y="546" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#1B2430">Fonts</text>
+  <text x="40" y="590" font-family="Space Grotesk, Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2430">Space Grotesk</text>
+  <text x="40" y="614" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">Headings, logo · Aa Ëë Çç Шш Ѓѓ</text>
+  <text x="490" y="590" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="30" font-weight="400" fill="#1B2430">Inter</text>
+  <text x="490" y="614" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="13" fill="#5A6472">Body text, UI, prices · Aa Ëë Çç Шш Ѓѓ · 0123456789 €</text>
+</svg>
