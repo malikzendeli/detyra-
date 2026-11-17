@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+
+# SQLite database: created locally by `npm run migrate`, never committed
+backend/data/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+
+.DS_Store
+Thumbs.db

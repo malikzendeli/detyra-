@@ -1,0 +1,22 @@
+{
+  "name": "tezga",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tezga: an online shop in Albanian, Macedonian and English, in one day, with cash on delivery.",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "migrate": "npm run migrate -w backend",
+    "dev": "concurrently -k -n api,web -c yellow,cyan \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w frontend",
+    "start": "npm start -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

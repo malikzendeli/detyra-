@@ -1,0 +1,140 @@
+/* Tezga brand tokens. Source: docs/brand-book.md */
+:root {
+  --terracotta: #e4572e; /* primary: buttons, links, CTA */
+  --ink: #1b2430; /* text, dark background */
+  --cream: #fff6ec; /* light background, cards */
+  --amber: #f2a541; /* accent only, never body text */
+
+  --bg: var(--cream);
+  --text: var(--ink);
+  --muted: rgb(27 36 48 / 68%);
+
+  --font-heading: 'Space Grotesk', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.top {
+  padding-bottom: 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wordmark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 0;
+  max-width: 720px;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(40px, 9vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+}
+
+.pitch {
+  font-size: clamp(18px, 2.4vw, 21px);
+  margin: 0 0 32px;
+  max-width: 620px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-bottom: 40px;
+}
+
+/* White on terracotta is OK only for large/bold labels (brand book → Contrast) */
+.cta {
+  display: inline-block;
+  background: var(--terracotta);
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.soon {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.other-langs {
+  list-style: none;
+  margin: 0;
+  padding: 16px 0 0;
+  border-top: 2px solid var(--amber);
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.other-langs li + li {
+  margin-top: 4px;
+}
+
+.bottom {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Dark mode: Night Ink background, logo-dark colours */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--ink);
+    --text: var(--cream);
+    --muted: rgb(255 246 236 / 70%);
+    color-scheme: dark;
+  }
+
+  .stall-mark rect {
+    fill: var(--cream);
+  }
+}

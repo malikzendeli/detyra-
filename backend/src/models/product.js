@@ -1,0 +1,21 @@
+export const Product = {
+  name: 'Product',
+  table: 'products',
+  fields: {
+    id: 'integer, primary key',
+    shop_id: 'Shop',
+    category_id: 'Category?',
+    name_sq: 'text',
+    name_mk: 'text?',
+    name_en: 'text?',
+    description_sq: 'text?',
+    description_mk: 'text?',
+    description_en: 'text?',
+    price: 'money',
+    is_active: 'boolean',
+    created_at: 'datetime',
+    updated_at: 'datetime',
+  },
+  belongsTo: { shop: 'Shop', category: 'Category' },
+  hasMany: { images: 'ProductImage.product_id', variants: 'ProductVariant.product_id' },
+}

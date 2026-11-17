@@ -1,0 +1,177 @@
+erDiagram
+    users ||--o{ shop_members : "is member"
+    shops ||--o{ shop_members : "has owner + staff"
+    shops ||--o{ categories : has
+    shops ||--o{ products : sells
+    categories |o--o{ products : groups
+    products ||--o{ product_images : has
+    products ||--|{ product_variants : "has (stock)"
+    shops ||--o{ delivery_prices : "price per city"
+    shops ||--o{ coupons : offers
+    shops ||--o{ customer_phones : knows
+    customer_phones ||--o{ orders : places
+    shops ||--o{ orders : receives
+    coupons |o--o{ orders : "applied to"
+    orders ||--|{ order_items : contains
+    products |o--o{ order_items : "copied into"
+    product_variants |o--o{ order_items : "copied into"
+    shops ||--o{ payments : pays
+    users ||--o{ payments : records
+
+    users {
+        int id PK
+        text email UK
+        text password_hash
+        text full_name
+        text phone
+        bool is_tezga_admin
+        datetime email_verified_at
+        datetime created_at
+    }
+    shops {
+        int id PK
+        text slug UK "name.tezga.shop"
+        datetime slug_changed_at
+        text name
+        text country "XK or MK"
+        text currency "EUR or MKD"
+        text phone
+        text logo_url
+        text default_language "sq mk en"
+        text status "draft trial active paused suspended"
+        datetime published_at
+        datetime trial_ends_at
+        datetime paid_until
+        datetime paused_at
+        money other_cities_delivery_price
+        money free_delivery_threshold
+        text telegram_chat_id
+        bool age_check_enabled
+        datetime created_at
+    }
+    shop_members {
+        int id PK
+        int shop_id FK
+        int user_id FK
+        text role "owner or staff"
+        datetime created_at
+    }
+    categories {
+        int id PK
+        int shop_id FK
+        text name_sq
+        text name_mk
+        text name_en
+        int sort_order
+    }
+    products {
+        int id PK
+        int shop_id FK
+        int category_id FK
+        text name_sq
+        text name_mk
+        text name_en
+        text description_sq
+        text description_mk
+        text description_en
+        money price
+        bool is_active
+        datetime created_at
+        datetime updated_at
+    }
+    product_images {
+        int id PK
+        int product_id FK
+        text url
+        int sort_order
+    }
+    product_variants {
+        int id PK
+        int product_id FK
+        text size
+        text color
+        text sku
+        int stock
+        money price "null = product price"
+    }
+    delivery_prices {
+        int id PK
+        int shop_id FK
+        text city
+        money price
+    }
+    coupons {
+        int id PK
+        int shop_id FK
+        text code
+        text discount_type "percent or fixed"
+        int discount_value
+        money min_order_total
+        int usage_limit
+        int used_count
+        datetime starts_at
+        datetime expires_at
+        bool is_active
+        datetime created_at
+    }
+    customer_phones {
+        int id PK
+        int shop_id FK
+        text phone "+383 or +389"
+        int refused_count
+        datetime created_at
+    }
+    orders {
+        int id PK
+        int shop_id FK
+        int customer_phone_id FK
+        int coupon_id FK
+        text number "TZ-1042"
+        text status "new confirmed shipped completed cancelled returned"
+        text first_name
+        text last_name
+        text phone
+        text email
+        text city
+        text address
+        text note
+        text language
+        money subtotal
+        money delivery_price
+        money discount
+        money total
+        text courier_name
+        text tracking_code
+        text cancel_reason
+        text cancelled_by
+        datetime reminder_sent_at
+        datetime created_at
+        datetime confirmed_at
+        datetime shipped_at
+        datetime completed_at
+        datetime cancelled_at
+        datetime returned_at
+    }
+    order_items {
+        int id PK
+        int order_id FK
+        int product_id FK
+        int variant_id FK
+        text product_name
+        text variant_label
+        money unit_price
+        int quantity
+        money line_total
+    }
+    payments {
+        int id PK
+        int shop_id FK
+        int recorded_by FK
+        text plan "monthly yearly founding setup"
+        money amount
+        text method "bank_transfer or cash"
+        datetime period_start
+        datetime period_end
+        text note
+        datetime created_at
+    }
